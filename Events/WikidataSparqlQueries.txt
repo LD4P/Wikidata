@@ -1,0 +1,98 @@
+## Sort (descending) count of properties (with English labels) used on Occurrences.
+
+SELECT ?prop ?propLabel ?count WHERE {
+    {
+        SELECT ?prop (COUNT(DISTINCT ?item) AS ?count) WHERE {
+           
+           hint:Query hint:optimizer "None" .
+           ?item wdt:P31 wd:Q1190554.
+           ?item ?p ?id .
+           ?prop wikibase:directClaim ?p .
+          
+        }  GROUP BY ?prop
+    }
+           
+    SERVICE wikibase:label {
+        bd:serviceParam wikibase:language "en" .
+    }
+
+} ORDER BY DESC (?count)
+
+
+
+## Sort (descending) count of properties (with English labels) used on Events.
+
+SELECT ?prop ?propLabel ?count WHERE {
+    {
+        SELECT ?prop (COUNT(DISTINCT ?item) AS ?count) WHERE {
+           
+           hint:Query hint:optimizer "None" .
+           ?item wdt:P31 wd:Q1656682.
+           ?item ?p ?id .
+           ?prop wikibase:directClaim ?p .
+          
+        }  GROUP BY ?prop
+    }
+           
+    SERVICE wikibase:label {
+        bd:serviceParam wikibase:language "en" .
+    }
+
+} ORDER BY DESC (?count)
+
+
+
+
+
+## Total count of occurrences
+
+SELECT (COUNT(?s) AS ?occurrences)
+
+{
+  ?s   wdt:P31 wd:Q1190554.
+  ?s ?p ?o.
+}
+
+
+
+
+
+
+## Total count of events
+
+SELECT (COUNT(?s) AS ?events)
+
+{
+  ?s   wdt:P31 wd:Q1656682.
+  ?s ?p ?o.
+}
+
+
+
+
+
+
+## Describe occurrences (limited to 100)
+
+Describe ?s
+{
+  ?s   wdt:P31 wd:Q1190554.
+}
+
+Limit 100
+
+
+
+
+
+## Describe events (limited to 100)
+
+Describe ?s
+{
+  ?s   wdt:P31 wd:Q1656682.
+}
+
+Limit 100
+
+
+
