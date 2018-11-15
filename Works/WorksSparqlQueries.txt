@@ -1,0 +1,19 @@
+# Get all subclasses in the class tree under Q386724 (Work) and any directly-asserted classes on those subclasses, for context (and by context, we might mean "towards weeding out musical instruments")
+
+SELECT DISTINCT ?subclass ?subclassLabel ?directsubclass ?directsubclassLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?subclass wdt:P279* wd:Q386724.
+  ?subclass wdt:P279 ?directsubclass.
+}
+LIMIT 1000
+
+# Ideally, we would run this instead, but it times out, unsurprisingly 
+# Get all subclasses in the class tree under Q386724 (Work) and any directly-asserted classes that are within that class tree
+
+SELECT DISTINCT ?subclass ?subclassLabel ?directsubclass ?directsubclassLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?subclass wdt:P279* wd:Q386724.
+  ?subclass wdt:P279 ?directsubclass.
+  ?directsubclass wdt:P279* wd:Q386724.
+}
+LIMIT 1000
