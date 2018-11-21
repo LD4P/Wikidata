@@ -1,0 +1,27 @@
+---
+authority:
+  service:
+search:
+    query: Amerique meridionale
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q56759862"
+    replacements:
+      maxRecords: '20'
+  -
+    query: Guido Adler
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q78716"
+    replacements:
+      maxRecords: '20'
+  -
+    query: map of Wales
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q22912348"
+    replacements:
+      maxRecords: '20'
+  -
+    query: The Real Kids
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q547648"
+    replacements:
+      maxRecords: '20'
