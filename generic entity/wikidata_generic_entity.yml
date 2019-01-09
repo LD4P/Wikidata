@@ -51,7 +51,7 @@ search:
   -
     # example of material used
     query: vellum 
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q226697"
     replacements:
       maxRecords: '20'
@@ -80,7 +80,7 @@ search:
   # example of instance in a collection
   # The Scream by Edvard Munch is a series of paintings instances of which exist in various collections
     query: The Scream
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q18891155"
     replacements:
       maxRecords: '20'
