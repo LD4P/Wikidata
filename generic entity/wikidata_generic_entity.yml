@@ -26,53 +26,53 @@ search:
     replacements:
       maxRecords: '20'
    -
-   	# example of geographic location (place of publication)
+    # example of geographic location (place of publication)
     query: San Francisco 
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q62"
     replacements:
       maxRecords: '20'
   -
-   # example of geographic location (unpopulated place or natural feature)
-   # Mount Washington NH
+    # example of geographic location (unpopulated place or natural feature)
+    # Mount Washington NH
     query: Mount Washington
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q572801"
     replacements:
       maxRecords: '20'
   -
-	# example of geographic location (unpopulated place or natural feature)
-	# e.g. Badlands North and South Dakota
+    # example of geographic location (unpopulated place or natural feature)
+    # e.g. Badlands North and South Dakota
     query: Badlands 
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q14204651"
     replacements:
       maxRecords: '20'
   -
-	# example of material used
+    # example of material used
     query: vellum 
 	  position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q226697"
     replacements:
       maxRecords: '20'
   -
-	# example of fabrication method
+    # example of fabrication method
     query: woodcut
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q173242"
     replacements:
       maxRecords: '20'
   -
-  # example of object depicted
+    # example of object depicted
     query: Taj Mahal
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q9141"
     replacements:
       maxRecords: '20'
   -
-	# example of object depicted
+    # example of object depicted
     query: buildings
-	  position: 10
+    position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q41176"
     replacements:
       maxRecords: '20'
