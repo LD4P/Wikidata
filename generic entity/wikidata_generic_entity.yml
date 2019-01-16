@@ -86,7 +86,21 @@ search:
       maxRecords: '20'
   -
   # example of object type
-   # example of role
+  # cassette: magnetic tape recording format for audio recording and playback
+  query: cassette tape
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q149757"
+      replacements:
+      maxRecords: '20'
+ 
+  # example of role
+  # drawer: person who makes drawings (artist/cartoonist/drafter/illustrator)
+  query: draftsman
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q15296811"
+      replacements:
+      maxRecords: '20'
+ 
    # example of event
    # example of abstract concept
    # example of genre
