@@ -110,6 +110,11 @@ search:
   
   
    # example of abstract concept
+   query: fun
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q1255864"
+      replacements:
+      maxRecords: '20'
    
    # example of genre
    query: post metal
@@ -117,7 +122,6 @@ search:
     subject_uri: "https://www.wikidata.org/wiki/Q41343"
       replacements:
       maxRecords: '20'
-   
 
    # example of time period
    query: Heian
