@@ -100,11 +100,31 @@ search:
     subject_uri: "https://www.wikidata.org/wiki/Q15296811"
       replacements:
       maxRecords: '20'
- 
+   
    # example of event
+   query: coastal pigs worn robot
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q33588923"
+      replacements:
+      maxRecords: '20'
+  
+  
    # example of abstract concept
+   
    # example of genre
+   query: post metal
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q41343"
+      replacements:
+      maxRecords: '20'
+   
    # example of time period
 
    # example of alternate language label
+   query: corsaire scala
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q54323030"
+      replacements:
+      maxRecords: '20'
+   
    # example of alias
