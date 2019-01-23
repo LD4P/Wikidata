@@ -157,3 +157,5 @@ search:
     subject_uri: "https://www.wikidata.org/wiki/Q131538"
       replacements:
       maxRecords: '1'
+      
+  # example of merged Q id
