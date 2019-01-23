@@ -127,6 +127,13 @@ search:
       maxRecords: '20'
 
    # example of alternate language label
+   query: corsaire
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q54323030"
+      replacements:
+      maxRecords: '20'
+      
+   # example of alternate language label and description
    query: corsaire scala
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q54323030"
