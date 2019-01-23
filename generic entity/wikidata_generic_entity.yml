@@ -150,3 +150,10 @@ search:
     subject_uri: "https://www.wikidata.org/wiki/Q351952"
       replacements:
       maxRecords: '20'
+      
+   # example of Q id
+   query: Q131538
+    position: 1
+    subject_uri: "https://www.wikidata.org/wiki/Q131538"
+      replacements:
+      maxRecords: '1'
