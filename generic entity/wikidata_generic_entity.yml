@@ -118,7 +118,13 @@ search:
       replacements:
       maxRecords: '20'
    
+
    # example of time period
+   query: Heian
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q193292"
+      replacements:
+      maxRecords: '20'
 
    # example of alternate language label
    query: corsaire scala
