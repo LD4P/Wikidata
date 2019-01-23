@@ -128,3 +128,8 @@ search:
       maxRecords: '20'
    
    # example of alias
+   query: Norfolk Russet
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q351952"
+      replacements:
+      maxRecords: '20'
