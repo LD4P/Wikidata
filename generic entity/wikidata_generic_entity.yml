@@ -152,5 +152,6 @@ search:
 term:
   -      
   identifier: Q131538 # example of Q id that should retrieve https://www.wikidata.org/wiki/Q131538
+  # is this how we'd add a unique to an accuracy test? basing this on example https://github.com/cul-it/qa_server/blob/master/config/authorities/linked_data/scenarios/oclc_fast_validation.yml
   
 # example of merged Q id
