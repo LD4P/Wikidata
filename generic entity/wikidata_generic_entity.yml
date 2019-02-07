@@ -1,6 +1,6 @@
 ---
 authority:
-  service:
+  service: direct # Christine is not sure what to put here for the purposes of the request
 search:
     query: Amerique meridionale # example of work
     position: 10
