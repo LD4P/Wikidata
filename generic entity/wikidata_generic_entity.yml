@@ -92,7 +92,7 @@ search:
     subject_uri: "https://www.wikidata.org/wiki/Q149757"
       replacements:
       maxRecords: '20'
- 
+  -
   # example of role
   # drawer: person who makes drawings (artist/cartoonist/drafter/illustrator)
   query: draftsman
@@ -100,62 +100,57 @@ search:
     subject_uri: "https://www.wikidata.org/wiki/Q15296811"
       replacements:
       maxRecords: '20'
-   
-   # example of event
-   query: coastal pigs worn robot
+  - 
+  # example of event
+  query: coastal pigs worn robot
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q33588923"
       replacements:
       maxRecords: '20'
-  
-  
-   # example of abstract concept
-   query: fun
+  -  
+  # example of abstract concept
+  query: fun
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q1255864"
       replacements:
       maxRecords: '20'
-   
-   # example of genre
+  -  
+  # example of genre
    query: post metal
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q41343"
       replacements:
       maxRecords: '20'
-
-   # example of time period
-   query: Heian
+  -  
+  # example of time period
+  query: Heian
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q193292"
       replacements:
       maxRecords: '20'
-
-   # example of alternate language label
-   query: corsaire
+  -  
+  # example of alternate language label
+  query: corsaire
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q54323030"
       replacements:
       maxRecords: '20'
-      
-   # example of alternate language label and description
-   query: corsaire scala
+  -  
+  # example of alternate language label and description
+  query: corsaire scala
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q54323030"
       replacements:
       maxRecords: '20'
-   
-   # example of alias
-   query: Norfolk Russet
+  -  
+  # example of alias
+  query: Norfolk Russet
     position: 10
     subject_uri: "https://www.wikidata.org/wiki/Q351952"
       replacements:
       maxRecords: '20'
-      
-   # example of Q id
-   query: Q131538
-    position: 1
-    subject_uri: "https://www.wikidata.org/wiki/Q131538"
-      replacements:
-      maxRecords: '1'
-      
-  # example of merged Q id
+term:
+  -      
+  identifier: Q131538 # example of Q id that should retrieve https://www.wikidata.org/wiki/Q131538
+  
+# example of merged Q id
