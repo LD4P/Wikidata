@@ -1,17 +1,19 @@
+## Queries to create reports and assess how Event entities are described in Wikidata
+
 ## Sort (descending) count of properties (with English labels) used on Occurrences.
 
 SELECT ?prop ?propLabel ?count WHERE {
     {
         SELECT ?prop (COUNT(DISTINCT ?item) AS ?count) WHERE {
-           
+
            hint:Query hint:optimizer "None" .
            ?item wdt:P31 wd:Q1190554.
            ?item ?p ?id .
            ?prop wikibase:directClaim ?p .
-          
+
         }  GROUP BY ?prop
     }
-           
+
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "en" .
     }
@@ -25,15 +27,15 @@ SELECT ?prop ?propLabel ?count WHERE {
 SELECT ?prop ?propLabel ?count WHERE {
     {
         SELECT ?prop (COUNT(DISTINCT ?item) AS ?count) WHERE {
-           
+
            hint:Query hint:optimizer "None" .
            ?item wdt:P31 wd:Q1656682.
            ?item ?p ?id .
            ?prop wikibase:directClaim ?p .
-          
+
         }  GROUP BY ?prop
     }
-           
+
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "en" .
     }
@@ -93,6 +95,3 @@ Describe ?s
 }
 
 Limit 100
-
-
-
