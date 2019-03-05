@@ -1,0 +1,157 @@
+---
+authority:
+  service: direct # Christine is not sure what to put here for the purposes of the request
+search:
+    query: Amerique meridionale # example of work
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q56759862"
+    replacements:
+      maxRecords: '20'
+  -
+    query: Guido Adler # example of agent (person)
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q78716"
+    replacements:
+      maxRecords: '20'
+  -
+    query: map of Wales # example of work
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q22912348"
+    replacements:
+      maxRecords: '20'
+  -
+    query: The Real Kids # example of agent (corporate body)
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q547648"
+    replacements:
+      maxRecords: '20'
+   -
+    # example of geographic location (place of publication)
+    query: San Francisco 
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q62"
+    replacements:
+      maxRecords: '20'
+  -
+    # example of geographic location (unpopulated place or natural feature)
+    # Mount Washington NH
+    query: Mount Washington
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q572801"
+    replacements:
+      maxRecords: '20'
+  -
+    # example of geographic location (unpopulated place or natural feature)
+    # e.g. Badlands North and South Dakota
+    query: Badlands 
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q14204651"
+    replacements:
+      maxRecords: '20'
+  -
+    # example of material used
+    query: vellum 
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q226697"
+    replacements:
+      maxRecords: '20'
+  -
+    # example of fabrication method
+    query: woodcut
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q173242"
+    replacements:
+      maxRecords: '20'
+  -
+    # example of object depicted
+    query: Taj Mahal
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q9141"
+    replacements:
+      maxRecords: '20'
+  -
+    # example of object depicted
+    query: buildings
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q41176"
+    replacements:
+      maxRecords: '20'
+  -
+  # example of instance in a collection
+  # The Scream by Edvard Munch is a series of paintings instances of which exist in various collections
+    query: The Scream
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q18891155"
+    replacements:
+      maxRecords: '20'
+  -
+  # example of object type
+  # cassette: magnetic tape recording format for audio recording and playback
+  query: cassette tape
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q149757"
+      replacements:
+      maxRecords: '20'
+  -
+  # example of role
+  # drawer: person who makes drawings (artist/cartoonist/drafter/illustrator)
+  query: draftsman
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q15296811"
+      replacements:
+      maxRecords: '20'
+  - 
+  # example of event
+  query: coastal pigs worn robot
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q33588923"
+      replacements:
+      maxRecords: '20'
+  -  
+  # example of abstract concept
+  query: fun
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q1255864"
+      replacements:
+      maxRecords: '20'
+  -  
+  # example of genre
+   query: post metal
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q41343"
+      replacements:
+      maxRecords: '20'
+  -  
+  # example of time period
+  query: Heian
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q193292"
+      replacements:
+      maxRecords: '20'
+  -  
+  # example of alternate language label
+  query: corsaire
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q54323030"
+      replacements:
+      maxRecords: '20'
+  -  
+  # example of alternate language label and description
+  query: corsaire scala
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q54323030"
+      replacements:
+      maxRecords: '20'
+  -  
+  # example of alias
+  query: Norfolk Russet
+    position: 10
+    subject_uri: "https://www.wikidata.org/wiki/Q351952"
+      replacements:
+      maxRecords: '20'
+term:
+  -      
+  identifier: Q131538 # example of Q id that should retrieve https://www.wikidata.org/wiki/Q131538
+  # is this how we'd add a unique to an accuracy test? basing this on example https://github.com/cul-it/qa_server/blob/master/config/authorities/linked_data/scenarios/oclc_fast_validation.yml
+  
+# example of merged Q id

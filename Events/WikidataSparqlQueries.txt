@@ -52,7 +52,6 @@ SELECT (COUNT(?s) AS ?occurrences)
 
 {
   ?s   wdt:P31 wd:Q1190554.
-  ?s ?p ?o.
 }
 
 
@@ -66,7 +65,6 @@ SELECT (COUNT(?s) AS ?events)
 
 {
   ?s   wdt:P31 wd:Q1656682.
-  ?s ?p ?o.
 }
 
 
