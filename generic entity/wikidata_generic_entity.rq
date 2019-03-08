@@ -1,7 +1,7 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?sLabel ?instance_ofLabel ?sDescription ?s ?sAltLabel ?alias ?placeLabel WHERE {
-  ?s ?label ""@en.          # query string between quotes here; to do: reformulate to search across multiple languages
+  ?s rdfs:label|skos:altLabel ""@en.          # query string between quotes here; to do: reformulate to search across multiple languages
   ?s skos:altLabel ?alias.
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
   OPTIONAL { ?s wdt:P31 ?instance_of. }
