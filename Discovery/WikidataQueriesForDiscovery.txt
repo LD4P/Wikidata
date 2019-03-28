@@ -114,6 +114,24 @@ SELECT (COUNT(?s) AS ?ULANMappedThings)
 
 
 
+#top 50 Classes and subclasses linked to ULAN, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P245	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P245	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
+
+
+
 
 # How many Wikidata entities are linked to ISNI?
 # Results as of 2019-03-29 = 1062109
@@ -123,3 +141,22 @@ SELECT (COUNT(?s) AS ?ISNIMappedThings)
 {
   ?s   wdt:P213 ?o.
 }
+
+
+
+
+#top 50 Classes and subclasses linked to ISNI, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P213	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P213	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
