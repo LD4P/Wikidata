@@ -50,3 +50,39 @@ SELECT (COUNT(?s) AS ?EntitiesWithLCCNs)
 {
   ?s wdt:P1144 ?o.
 }
+
+
+
+
+# How many Wikidata entities are linked to VIAF?
+# Results as of 2019-03-29 = 1392417
+
+SELECT (COUNT(?s) AS ?VIAFMappedThings)
+
+{
+  ?s   wdt:P214 ?o.
+}
+
+
+
+
+# How many Wikidata entities are linked to ULAN?
+# Results as of 2019-03-29 = 78204
+
+SELECT (COUNT(?s) AS ?ULANMappedThings)
+
+{
+  ?s   wdt:P245 ?o.
+}
+
+
+
+
+# How many Wikidata entities are linked to ISNI?
+# Results as of 2019-03-29 = 1062109
+
+SELECT (COUNT(?s) AS ?ISNIMappedThings)
+
+{
+  ?s   wdt:P213 ?o.
+}
