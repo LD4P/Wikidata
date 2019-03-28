@@ -13,6 +13,24 @@ SELECT (COUNT(?s) AS ?LCMappedThings)
 
 
 
+#top 50 Classes and subclasses linked to LC Aurthorities, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P244	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P244	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
+
+
+
 
 # How many Humans are linked to LC Authorities?
 # Results as of 2019-03-29 = 831588
@@ -62,6 +80,25 @@ SELECT (COUNT(?s) AS ?VIAFMappedThings)
 {
   ?s   wdt:P214 ?o.
 }
+
+
+
+
+#top 50 Classes and subclasses linked to VIAF, Query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P214	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P214	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
 
 
 
