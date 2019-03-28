@@ -1,0 +1,48 @@
+# How many Wikidata entities are linked to LC Authorities?
+# Results as of 2019-03-29 = 1020332
+
+SELECT (COUNT(?s) AS ?LCMappedThings)
+
+{
+  ?s   wdt:P244 ?o.
+}
+
+
+
+
+# How many Humans are linked to LC Authorities?
+# Results as of 2019-03-29 = 831588
+
+SELECT (COUNT(?s) AS ?HumansMappedToLC)
+
+{
+  ?s   wdt:P31 <http://www.wikidata.org/entity/Q5> .
+  ?s wdt:P244 ?o .
+}
+
+
+
+
+# How many Creative Works are linked to LC Name Authorities?
+# Results as of 2019-03-29 = 12
+
+SELECT (COUNT(?s) AS ?CreativeWorksMappedToLC)
+
+{
+  ?s wdt:P31 wd:Q17537576.
+  ?s wdt:P244 ?o.
+}
+
+
+
+
+# How many Wikidata Entities have LCCNs?
+# Results as of 2019-03-29 = 16109
+
+SELECT (COUNT(?s) AS ?CreativeWorksMappedToLC)
+
+SELECT (COUNT(?s) AS ?EntitiesWithLCCNs)
+
+{
+  ?s wdt:P1144 ?o.
+}
