@@ -1,3 +1,7 @@
+# Queries to aid in understanding what is possible for discovery using Wikidata; including frequency of links to external data sources, similar authors, related works, etc.
+
+
+
 # How many Wikidata entities are linked to LC Authorities?
 # Results as of 2019-03-29 = 1020332
 
