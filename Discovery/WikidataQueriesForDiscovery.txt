@@ -61,8 +61,6 @@ SELECT (COUNT(?s) AS ?CreativeWorksMappedToLC)
 # How many Wikidata Entities have LCCNs?
 # Results as of 2019-03-29 = 16109
 
-SELECT (COUNT(?s) AS ?CreativeWorksMappedToLC)
-
 SELECT (COUNT(?s) AS ?EntitiesWithLCCNs)
 
 {
