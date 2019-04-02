@@ -84,13 +84,13 @@ SELECT (COUNT(?s) AS ?VIAFMappedThings)
 
 #top 50 Classes and subclasses linked to VIAF, Query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
 
-SELECT ?class ?classLabel ?count ?use_as_Label
-{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+SELECT ?class ?classLabel ?count
+{	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P214	?p	; wdt:P31	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
   	UNION
-	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P214	?p	; wdt:P279	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
@@ -114,8 +114,8 @@ SELECT (COUNT(?s) AS ?ULANMappedThings)
 
 #top 50 Classes and subclasses linked to ULAN, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
 
-SELECT ?class ?classLabel ?count ?use_as_Label
-{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+SELECT ?class ?classLabel ?count
+{	{	SELECT ?class (COUNT(*) AS ?count) 
 		{	?a	wdt:P245	?p	; wdt:P31	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
