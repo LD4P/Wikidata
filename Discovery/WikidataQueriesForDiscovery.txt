@@ -16,12 +16,12 @@ SELECT (COUNT(?s) AS ?LCMappedThings)
 #top 50 Classes and subclasses linked to LC Aurthorities, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
 
 SELECT ?class ?classLabel ?count ?use_as_Label
-{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+{	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P244	?p	; wdt:P31	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
   	UNION
-	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P244	?p	; wdt:P279	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
@@ -238,12 +238,12 @@ SELECT (COUNT(?s) AS ?MusicBrainzWorkMappedThings)
 #top 50 Classes and subclasses linked to MusicBrainz Work ID, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
 
 SELECT ?class ?classLabel ?count ?use_as_Label
-{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+{	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P435	?p	; wdt:P31	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
   	UNION
-	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P435	?p	; wdt:P279	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
@@ -266,12 +266,12 @@ SELECT (COUNT(?s) AS ?MusicBrainzReleaseGroupMappedThings)
 #top 50 Classes and subclasses linked to MusicBrainz Release Group ID, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
 
 SELECT ?class ?classLabel ?count ?use_as_Label
-{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+{	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P436	?p	; wdt:P31	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
   	UNION
-	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+	{	SELECT ?class (COUNT(*) AS ?count)
 		{	?a	wdt:P436	?p	; wdt:P279	?class}
         GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
   	}
