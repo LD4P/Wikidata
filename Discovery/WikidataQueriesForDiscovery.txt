@@ -160,3 +160,123 @@ SELECT ?class ?classLabel ?count ?use_as_Label
   	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
 }
 ORDER BY DESC(?count) ?class
+
+
+
+# How many Wikidata entities are linked to ORCID?
+# Results as of 2019-03-28 = 468533
+
+SELECT (COUNT(?s) AS ?ORCIDMappedThings)
+
+{
+  ?s   wdt:P496 ?o.
+}
+
+
+
+
+#top 50 Classes and subclasses linked to ORCID ID, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P496	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P496	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
+
+
+
+
+# How many Wikidata entities are linked to MusicBrainz Artist ID?
+# Results as of 2019-03-28 = 186844
+
+SELECT (COUNT(?s) AS ?MusicBrainzArtistMappedThings)
+
+{
+  ?s   wdt:P434 ?o.
+}
+
+
+
+
+#top 50 Classes and subclasses linked to MusicBrainz Artist ID, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P434	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P434	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
+
+
+
+
+# How many Wikidata entities are linked to MusicBrainz Work ID?
+# Results as of 2019-03-28 = 23030
+
+SELECT (COUNT(?s) AS ?MusicBrainzWorkMappedThings)
+
+{
+  ?s   wdt:P435 ?o.
+}
+
+
+
+
+#top 50 Classes and subclasses linked to MusicBrainz Work ID, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P435	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P435	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
+
+# How many Wikidata entities are linked to MusicBrainz Release Group ID?
+# Results as of 2019-03-28 = 106900
+
+SELECT (COUNT(?s) AS ?MusicBrainzReleaseGroupMappedThings)
+
+{
+  ?s   wdt:P436 ?o.
+}
+
+
+
+
+#top 50 Classes and subclasses linked to MusicBrainz Release Group ID, query derived from a VIAF query found here: https://www.wikidata.org/wiki/Wikidata:WikiProject_Authority_control#Wikidata_to_VIAF_Coreferencing
+
+SELECT ?class ?classLabel ?count ?use_as_Label
+{	{	SELECT ?class (COUNT(*) AS ?count) (wd:P31 as ?use_as_)
+		{	?a	wdt:P436	?p	; wdt:P31	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	UNION
+	{	SELECT ?class (COUNT(*) AS ?count) (wd:P279 as ?use_as_)
+		{	?a	wdt:P436	?p	; wdt:P279	?class}
+        GROUP BY ?class ORDER BY DESC(?count) LIMIT 50
+  	}
+  	SERVICE wikibase:label { bd:serviceParam wikibase:language "en,en" }
+}
+ORDER BY DESC(?count) ?class
